@@ -144,7 +144,6 @@ func (c *Client) post(metrics []Metric) error {
 }
 
 func (c *Client) Publish(metric Metric) {
-	metric.Type = "gauge"
 	c.ch <- metric
 }
 
